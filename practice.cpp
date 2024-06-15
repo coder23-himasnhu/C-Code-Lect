@@ -9,9 +9,3 @@ class Student
     string name;
     int roll;
 };
-int main()
-{
-    Student A1;
-    A1.name = "himanshu";
-    cout<<A1.name;
-}
