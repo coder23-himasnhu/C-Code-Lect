@@ -30,8 +30,30 @@
 
 // How to create derive class:-
 // class Student:    _______           ________
-//    (Child name) (access modifier) (Parent class)\
+//    (Child name) (access modifier) (Parent class)
 // access modifier:- public, private, protected
 
-// Hence we conclude that the strongest onee is:- private > protected > public
-// to jo bhi strong hoga uska wo apna chalyega class me 
+// Hence we conclude that the strongest one is:- private > protected > public
+// to jo bhi strong hoga uska wo apna chalyega class me
+
+// Use of access modifier:-
+
+#include<iostream>
+using namespace std;
+
+class Human
+{
+    public:
+    string name;
+    int age, weight;
+};
+class student: public Human
+{
+    int roll_num, fees;
+};
+
+int main()
+{
+    student A;
+    A.name = "rohit";
+}
