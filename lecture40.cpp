@@ -15,7 +15,7 @@ class Human
     public:
     void work()
     {
-        cout<<"I am WOrking\n"
+        cout<<"I am WOrking\n" ;
     }
 };
 class Student: public Human
@@ -23,11 +23,11 @@ class Student: public Human
     int roll_number, fees;
 
     public:
-    Student(string name, int age, int roll_number, int fees)
+    Student(string name, int age, int roll_num, int fees)
     {
         this->name = name;
         this->age = age;
-        this->roll_num = roll_num;
+        this->roll_number = roll_num;
         this->fees = fees;
     }
 };

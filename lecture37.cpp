@@ -6,7 +6,7 @@
 
 // there are two type of constructor:- 1) Default constructor(it doesnt has any parameter) 2) Parameter constructor(it has some parameter in their fucntion)
 // this:- jo bhi object hum create karte hai uske address ko store karke rakhta hai
-// By default compiler ek constructor khud se banata hai jo class me hota hai but usse hum dekh nhi skate 
+// By default compiler ek constructor khud se banata hai jo class me hota hai but usse hum dekh nhi skate
 // but if we create any type of constructor then compiler doesnt create any by default construtor.
 // agar ek constructor 3 parameter le raha hai to dusra constructor usi class me 3 parameter nhi le sakta
 
