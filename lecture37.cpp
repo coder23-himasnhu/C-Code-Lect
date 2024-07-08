@@ -1,7 +1,7 @@
 // Constructor:-
 // It is a special function that is invoked automatically at the time of Object Creation.(jaise hi hum object ko form karte hai constructor khud se create ho jata hai )
 // -> Name of the Constructor should be same as class name
-// -> It does not has any return type (constructor ko void lagana nhi hai)
+// -> It does not has any return type (constructor ko void nhi lagana hai)
 // -> it is used to initialize the value
 
 // there are two type of constructor:- 1) Default constructor(it doesnt has any parameter) 2) Parameter constructor(it has some parameter in their fucntion)

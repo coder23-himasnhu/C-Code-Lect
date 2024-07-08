@@ -1,5 +1,5 @@
 // Inheritance:- the capability of a class to derive property and characteristics from another class
-// matlab ek baar define kar do property ko phir baar baar use karo
+// matlab ek baar define kar do property ko, phir baar baar use karo
 // means lets imagine hum do ya usse jyada constructor banate hai aur un sabme kuch property same hai like:- name, to hum usse ek jagah define kar denge
 // taki wo baar baar use ho sake.
 
