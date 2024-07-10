@@ -2,8 +2,8 @@
 
 // to find first and last occurance of the element in an array , this code is written by me
 
-// #include<iostream>
-// #include<vector>
+#include<iostream>
+#include<vector>
 
 using namespace std;
 

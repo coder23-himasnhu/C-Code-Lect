@@ -12,6 +12,8 @@
 // cin>>x;(if input of x is 0)
 // cout<<i/x;
 
+// new keyword run time me memory allocate karke dega heap me
+
 // Eg:- of Function Overloading:- both the function has same name, par hamara compiler compile time pe bata diya ki konsa function lena konse parameter pe
 
 // #include<iostream>
@@ -37,6 +39,8 @@
 // }
 
 // Eg:- of Operator Overloading:- Operator(+) same hi hai but work alag alag hai, int ke liye add kar raha hai, aur string ke liye combine kar raha hai
+// this operator overloading also show the behaviour of polymorphism
+// operator ko as a function name liks sakte hai like name of function is: +,-,/
 // int a=5;
 // int b=10;
 // cout<<a+b;  //output:- 15
@@ -45,25 +49,83 @@
 // stirng str2 = "Negi";
 // cout<<str1+str2 //RohitNegi
 
+// #include<iostream>
+// using namespace std;
+
+// class Complex
+// {
+//     int real, img;
+//     public:
+//     Complex()
+//     {
+
+//     };
+//     Complex(int real, int img)
+//     {
+//         this->real = real;
+//         this->img = img;
+//     }
+// void display()
+// {
+//     cout<<real<<"+i"<<img<<endl;
+// };
+// Complex operator +(Complex &C)
+// {
+//     Complex ans;
+//     ans.real = real+C.real;
+//     ans.img = img + C.img;
+//     return ans;
+// }
+
+// };
+
+// int main()
+// {
+//     Complex C1(3,4);
+//     Complex C2(4,6);
+    
+//     Complex C3 = C1+C2;
+//     C2.display();
+// }
+
+
+// Virtual Function: Why virtual function is called run time polymorsim?
+
+// p=new Dog():- dog ka ek object create karo aur uska address p me store kara do
+//  animal *p:- p type ka ek pointer hai, jo pointer kar raha hai animal ko
+// virtual keyword jaha bhi dikhe to wo ye batayega ki usko run time me decide karna compile time pe nhi.
+
+
 #include<iostream>
 using namespace std;
 
-class Complex
+class Animal
 {
-    int real, img;
     public:
-    Complex(int real, int img)
+    virtual void speak()  //agar hum yaha virtual nhi lagate hai to huhu print hoga
     {
-        this->real = real;
-        this->img = img;
+        cout<<"HuHu\n";
     }
 };
-void display()
+class Dog: public Animal
 {
-    cout<<real<<"+i"<<img;
+    public:
+    void speak()
+    {
+        cout<<"Bark\n";
+    }
 };
+
 int main()
 {
-    Complex C1;
-    C1(3,2);
+    Animal *p;
+    p = new Dog();
+    p->speak();
+    //upar ke teen line aise bhi likh sakte the:-
+    // Dog d1;
+    // d1.speak();
 }
+
+// pure virtual function:- Jis function me kuch bhi assign na ho, 0 assign ho usse pure virtual function bolte hai
+// Eg:- virtual void speak()=0;
+// condition:- jis class me pure virtual function hai, uska hum direct object create nhi kar sakte

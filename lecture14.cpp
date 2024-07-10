@@ -3,14 +3,14 @@
 
 
 // to find the size of the array
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int main()
-// {
-//     int arr[5]={1,2,3,4,5};
-//     cout<<sizeof(arr)/sizeof(arr[0]);
-// }
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    cout<<sizeof(arr)/sizeof(arr[0]);
+}
 
 
 // to take input from the user
