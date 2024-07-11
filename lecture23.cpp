@@ -1,23 +1,23 @@
 // prefix sum
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int main()
-// {
-//     int arr[100]={6,4,5,-3,2,8};
+int main()
+{
+    int arr[100]={6,4,5,-3,2,8};
 
-//     int prefix[100];
-//     prefix[0]=arr[0];
+    int prefix[100];
+    prefix[0]=arr[0];
 
-//     for(int i=1; i<6; i++)
-//     {
-//         prefix[i]=arr[i]+prefix[i-1];
-//     }
-//     for(int i=0; i<6; i++)
-//     {
-//         cout<<prefix[i]<<" ";
-//     }
-// }
+    for(int i=1; i<6; i++)
+    {
+        prefix[i]=arr[i]+prefix[i-1];
+    }
+    for(int i=0; i<6; i++)
+    {
+        cout<<prefix[i]<<" ";
+    }
+}
 
 // suffix sum
 // #include<iostream>
@@ -56,44 +56,44 @@
 
 
 // // divide the arary in two part and the sum of both part is equal
-#include<iostream>
-#include<vector>
-#include<algorithm>
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
 
-using namespace std;
+// using namespace std;
 
-bool divide(vector<int>arr)
-{
-    int n=arr.size(),sum=0,prefix=0;
-    // it gives the total sum of the array
-    for(int i=0; i<n; i++)
-    {
-        sum+=arr[i];
-    }
-    // it divide the array in two parts and check the array sum
-    for(int i=0; i<n; i++)
-    {
-        prefix+=arr[i];
-        // int ans=sum-prefix;
-        if(sum==2*prefix)
-        {
-            return 1;
-        }
-    }
-    return 0;
-}
+// bool divide(vector<int>arr)
+// {
+//     int n=arr.size(),sum=0,prefix=0;
+//     // it gives the total sum of the array
+//     for(int i=0; i<n; i++)
+//     {
+//         sum+=arr[i];
+//     }
+//     // it divide the array in two parts and check the array sum
+//     for(int i=0; i<n; i++)
+//     {
+//         prefix+=arr[i];
+//         // int ans=sum-prefix;
+//         if(sum==2*prefix)
+//         {
+//             return 1;
+//         }
+//     }
+//     return 0;
+// }
 
-int main()
-{
-    int n;
-    cout<<"Enter the size of the array:- ";
-    cin>>n;
-    vector<int>v(n);
-    cout<<"enter the element of the array:- ";
-    for(int i=0; i<n; i++)
-    {
-        cin>>v[i];
-    }
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the size of the array:- ";
+//     cin>>n;
+//     vector<int>v(n);
+//     cout<<"enter the element of the array:- ";
+//     for(int i=0; i<n; i++)
+//     {
+//         cin>>v[i];
+//     }
 
-    cout<<divide(v);
-}
+//     cout<<divide(v);
+// }

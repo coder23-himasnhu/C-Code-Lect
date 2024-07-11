@@ -1,17 +1,15 @@
-#include <iostream>
-#include <cmath> // Include the cmath library for abs function
+#include<iostream>
+using namespace std;
 
-void 12()
+int main()
 {
-    s
-}
-
-int main() {
-    int a = -10;
-    int b = 5;
-    
-    std::cout << "Absolute value of " << a << " is " << abs(a) << std::endl;
-    std::cout << "Absolute value of " << b << " is " << abs(b) << std::endl;
-
-    return 0;
+    int arr[5]={12,3,4,4,2};
+    // int index[100];
+    // index[0]=arr[0];
+    int ans=0;
+    for(int i=0; i<5; i+2)
+    {
+        ans = arr[i]+arr[i+1];
+    }
+    cout<<ans;
 }
