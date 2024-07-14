@@ -88,3 +88,9 @@ time complexity of sort is nlogn
 eg:- vector<int>v={4,3,2,1};
     sort(v.begin(), v.end())  //it sort the element in the ascending order(sort(from,to))
     sort(v.begin(), v.end(), greater<int>())  //it sort the element in the decending order
+
+
+// vector ki help se hum array ka size increase kar sakte hai par ek problem hai:-
+// agar hamara vector 5 size ka hai aur hame usse increase karna hai to wo direct uska double karta hai
+// means 10 size ka karega, aur wo 5 size ke vector ko waha se hata dega
+// ye sare kaam hamare Heap me hote hai because heap is dynamically storage
