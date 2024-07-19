@@ -14,7 +14,7 @@
 // {
 //     public: 
 //     int data;
-//     Node *next;
+//     Node *next;  //next is a pointer that points the next node
 
 //     Node(int value)
 //     {
