@@ -137,3 +137,25 @@
 
 // Delete a Particular Node
 // GFG 
+
+// Reverse the Linked List with data only
+// Solved on Leetcode
+
+// Reverse the Linked List with address only
+// class Solution{
+//     public:
+//     ListNode *reverseList(ListNode *head)
+//     {
+//         ListNode *curr = head, *prev = NULL, *fut = NULL;
+
+//         while(curr)
+//         {
+//             fut = curr->next;
+//             curr->next = prev;
+//             prev = curr;
+//             curr = fut;
+//         };
+//             head = prev;
+//             return prev;
+//     }
+// }
