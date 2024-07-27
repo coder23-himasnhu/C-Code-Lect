@@ -212,30 +212,30 @@
 //destrcutor bhi by default create ho jata hai compiler se but if hum use create karte hai to compiler hamare liye destrcutor create nhi karega
 // destructor ek bhi baar create hoga while constructor baar baar create kar sakte hai
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Coustomer{
-    string name;
-    int *data;
+// class Coustomer{
+//     string name;
+//     int *data;
 
-    public:
-    Coustomer()
-    {
-        name="rohit";
-        data= new int;
-        *data=10;
-        cout<<"constructor is call"<<endl;
-    }
-    // destructure
-    ~Coustomer()
-    {
-        delete data;
-        cout<<"destrucure is call";
-    }
-};
+//     public:
+//     Coustomer()
+//     {
+//         name="rohit";
+//         data= new int;
+//         *data=10;
+//         cout<<"constructor is call"<<endl;
+//     }
+//     // destructure
+//     ~Coustomer()
+//     {
+//         delete data;
+//         cout<<"destrucure is call";
+//     }
+// };
 
-int main()
-{
-    Coustomer A1;
-}
+// int main()
+// {
+//     Coustomer A1;
+// }

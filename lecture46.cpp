@@ -64,6 +64,53 @@
 
 
 // convert array in doubly linked list
+// #include<iostream>
+// using namespace std;
+
+// class Node
+// {
+//     public:
+//     int data;
+//     Node *next;
+//     Node *prev;
+
+//     Node(int value)
+//     {
+//         data = value;
+//         next = prev = NULL;
+//     }
+// };
+
+// int main()
+// {
+//     Node *head = NULL, *tail = NULL;
+//     int arr[] = {1,2,3,4,5};
+//     for(int i=0; i<5; i++)
+//     {
+//         // Linked list does not exist
+//         if(head == NULL)
+//         {
+//             head = new Node(arr[i]);
+//             tail = head;
+//         }
+//         // exist karti hai
+//         else{
+//             Node *temp = new Node(arr[i]);
+//             tail->next = temp;
+//             temp->prev = tail;
+//             tail = temp;
+//         }
+//     }
+//     Node *trav = head;
+//     while(trav)
+//     {
+//         cout<<trav->data<<" ";
+//         trav = trav->next;
+//     }
+// }
+
+
+// Insert node at any given position
 #include<iostream>
 using namespace std;
 
@@ -101,12 +148,39 @@ int main()
             tail = temp;
         }
     }
+    int pos = 2;
+    // insert at start
+    if(pos == 0)
+    {
+        // Linked list exist na kare
+        if(head == NULL)
+        {
+            head = new Node(5);
+        }
+        // linked list exist kare
+        else{
+            Node *temp = new Node(5);
+            temp->next = head;
+            head->prev = temp;
+            head = temp;
+        }
+    }
+    else{
+        Node *curr = head;
+        // go to the node, ater which i have to insert
+        while(--pos)
+        {
+            curr = curr->next;
+        };
+
+        // insert at end
+        if(curr->next==)
+        // insert at middle
+    }
     Node *trav = head;
     while(trav)
     {
         cout<<trav->data<<" ";
         trav = trav->next;
     }
-}
-
-// 54 minute pe roka
+// } 1h 7m 20s

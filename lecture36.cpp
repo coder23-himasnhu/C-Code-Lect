@@ -124,7 +124,7 @@
 //     a obj;
 //     cout<<sizeof(obj)<<endl;
 // }
-
+// By assuming word size is bit (because of 32 byte memory), so we access 4 bit at one time
 // sizeof empty class is 1
 // sizeof int in class is 4
 // sizeof two int in class is 8
@@ -169,26 +169,28 @@
 // eg:- char 1 , int 4, char 1, total=9 byte with padding (par 9 divide nhi ho raha 4 (biggest datatype)se to uska nearest greatest number hoga wohi answer hoga like 12 divide hota hai 12 se)
 
 // Dynamically Memory Allocation 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Student{
-    public:
-    string name;
-    int age,roll_num;
-    string grade;
-};
+// class Student{
+//     public:
+//     string name;
+//     int age,roll_num;
+//     string grade;
+// };
 
-int main()
-{
-    Student *S = new Student;
-    (*S).name="Rohit";
-    (*S).age=10;
-    (*S).roll_num=21;
-    (*S).grade="A+";
+// int main()
+// {
+//     Student *S = new Student;
+//     (*S).name="Rohit";
+//     (*S).age=10;
+//     (*S).roll_num=21;
+//     (*S).grade="A+";
 
-    cout<<S->name<<endl;
-    cout<<S->age<<endl;
-    cout<<S->roll_num<<endl;
-    cout<<S->grade<<endl;
-}
+//     cout<<S->name<<endl;
+//     cout<<S->age<<endl;
+//     cout<<S->roll_num<<endl;
+//     cout<<S->grade<<endl;
+// }
+
+// by using -> symbol we can dynamically allocate the memory (it is just a way)
