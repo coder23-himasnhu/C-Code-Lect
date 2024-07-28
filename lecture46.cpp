@@ -111,6 +111,96 @@
 
 
 // Insert node at any given position
+// #include<iostream>
+// using namespace std;
+
+// class Node
+// {
+//     public:
+//     int data;
+//     Node *next;
+//     Node *prev;
+
+//     Node(int value)
+//     {
+//         data = value;
+//         next = prev = NULL;
+//     }
+// };
+
+// int main()
+// {
+//     Node *head = NULL, *tail = NULL;
+//     int arr[] = {1,2,3,4,5};
+//     for(int i=0; i<5; i++)
+//     {
+//         // Linked list does not exist
+//         if(head == NULL)
+//         {
+//             head = new Node(arr[i]);
+//             tail = head;
+//         }
+//         // exist karti hai
+//         else{
+//             Node *temp = new Node(arr[i]);
+//             tail->next = temp;
+//             temp->prev = tail;
+//             tail = temp;
+//         }
+//     }
+//     int pos = 2;  //in which position we have to insert
+//     // insert at start
+//     if(pos == 0)
+//     {
+//         // Linked list exist na kare
+//         if(head == NULL)
+//         {
+//             head = new Node(5);
+//         }
+//         // linked list exist kare
+//         else{
+//             Node *temp = new Node(5);
+//             temp->next = head;
+//             head->prev = temp;
+//             head = temp;
+//         }
+//     }
+//     else{
+//         Node *curr = head;
+//         // go to the node, ater which i have to insert
+//         while(--pos)
+//         {
+//             curr = curr->next;
+//         };
+
+//         // insert at end
+//         if(curr->next==NULL)  //Last Node if it has NULL
+//         {
+//             Node *temp = new Node(5);
+//             temp->prev = curr;
+//             curr->next = temp;
+//         }
+//         // insert at middle
+//         else{
+//             Node *temp = new Node(5);
+//             temp->next = curr->next;
+//             temp->prev = curr;
+//             curr->next = temp;
+//             temp->next->prev = temp;
+//         }
+//     }
+//     Node *trav = head;
+//     while(trav)
+//     {
+//         cout<<trav->data<<" ";
+//         trav = trav->next;
+//     }
+// }
+
+
+// Deletion Of a Node 
+
+// Delete at start
 #include<iostream>
 using namespace std;
 
@@ -132,55 +222,34 @@ int main()
 {
     Node *head = NULL, *tail = NULL;
     int arr[] = {1,2,3,4,5};
-    for(int i=0; i<5; i++)
-    {
-        // Linked list does not exist
-        if(head == NULL)
-        {
-            head = new Node(arr[i]);
-            tail = head;
-        }
-        // exist karti hai
-        else{
-            Node *temp = new Node(arr[i]);
-            tail->next = temp;
-            temp->prev = tail;
-            tail = temp;
-        }
-    }
-    int pos = 2;
-    // insert at start
-    if(pos == 0)
-    {
-        // Linked list exist na kare
-        if(head == NULL)
-        {
-            head = new Node(5);
-        }
-        // linked list exist kare
-        else{
-            Node *temp = new Node(5);
-            temp->next = head;
-            head->prev = temp;
-            head = temp;
-        }
-    }
-    else{
-        Node *curr = head;
-        // go to the node, ater which i have to insert
-        while(--pos)
-        {
-            curr = curr->next;
-        };
 
-        // insert at end
-        if(curr->next==)
-        // insert at middle
+    // delete at start
+    if(head!=NULL)
+    {
+        // if only one node exist
+        if(head->next == NULL)
+        {
+            delete head;
+            head = NULL;
+        }
+        // if more than one node exist
+        else{
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+        head->prev = NULL;
+        }
     }
+
+    // Traverse and Print the data
     Node *trav = head;
     while(trav)
     {
         cout<<trav->data<<" ";
         trav = trav->next;
     }
-// } 1h 7m 20s
+}
+
+
+// Application of Doubly Linked List:-
+// 1)Undo/Redo
