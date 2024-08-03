@@ -201,55 +201,93 @@
 // Deletion Of a Node 
 
 // Delete at start
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Node
-{
-    public:
-    int data;
-    Node *next;
-    Node *prev;
+// class Node
+// {
+//     public:
+//     int data;
+//     Node *next;
+//     Node *prev;
 
-    Node(int value)
-    {
-        data = value;
-        next = prev = NULL;
-    }
-};
+//     Node(int value)
+//     {
+//         data = value;
+//         next = prev = NULL;
+//     }
+// };
 
-int main()
-{
-    Node *head = NULL, *tail = NULL;
-    int arr[] = {1,2,3,4,5};
+// int main()
+// {
+//     Node *head = NULL, *tail = NULL;
+//     int arr[] = {1,2,3,4,5};
 
-    // delete at start
-    if(head!=NULL)
-    {
-        // if only one node exist
-        if(head->next == NULL)
-        {
-            delete head;
-            head = NULL;
-        }
-        // if more than one node exist
-        else{
-        Node *temp = head;
-        head = head->next;
-        delete temp;
-        head->prev = NULL;
-        }
-    }
+//     // delete at start
+//     if(head!=NULL)
+//     {
+//         // if only one node exist
+//         if(head->next == NULL)
+//         {
+//             delete head;
+//             head = NULL;
+//         }
+//         // if more than one node exist
+//         else{
+//         Node *temp = head;
+//         head = head->next;
+//         delete temp;
+//         head->prev = NULL;
+//         }
+//     }
 
-    // Traverse and Print the data
-    Node *trav = head;
-    while(trav)
-    {
-        cout<<trav->data<<" ";
-        trav = trav->next;
-    }
-}
+//     // Traverse and Print the data
+//     Node *trav = head;
+//     while(trav)
+//     {
+//         cout<<trav->data<<" ";
+//         trav = trav->next;
+//     }
+// }
 
 
 // Application of Doubly Linked List:-
 // 1)Undo/Redo
+
+
+// Merge two sorted linked list problem on GFG:-
+// function:-
+Node *sortedMerge(Node *head1, Node *head2)
+{
+    Node *head = new Node(0);
+    Node *tail = head;
+
+    while(head1 && head2)
+    {
+        if(head1->data<=head2->data)
+        {
+            tail->next = head1;
+            head1 = head1->next;
+            tail = tail->next;
+            tail->next = NULL;
+        }
+        else{
+            tail->next = head2;
+            head2 = head2->next;
+            tail = tail->next;
+            tail->next = NULL;
+        }
+    }
+    if(head1)
+    {
+        tail->next = head1;
+    }
+    else{
+        tail->next = head2;
+    }
+    tail = head;
+    head = head->next;
+    delete tail;
+
+    return head;
+}
