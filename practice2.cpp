@@ -1,9 +1,9 @@
- #include<iostream>
+#include<iostream>
 using namespace std;
 
 class Node
 {
-    public: 
+    public:
     int data;
     Node *next;
 
@@ -16,9 +16,28 @@ class Node
 
 int main()
 {
-    // Node A1(4);  //this is static way
-    Node *Head;
-    Head = new Node(4);
-    cout<<Head->data<<endl;
-    cout<<Head->next<<endl;
+    Node *Head, *Tail;
+    Tail = Head = NULL;  //tail aur head dono me NULL hai
+    int arr[] = {2,4,6,8,10};
+    // Linked List is empty
+    for(int i=0; i<5; i++)
+    {
+    if(Head == NULL)
+    {
+        Head = new Node(arr[i]);
+        Tail = Head;
+    }
+    else{
+        Tail->next = new Node(arr[i]);
+        Tail = Tail->next;
+    }
+    }
+
+    Node *temp;
+    temp = Head;
+    while(temp)
+    {
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
 }
