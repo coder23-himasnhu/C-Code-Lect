@@ -34,7 +34,7 @@
 
 
 // Create a New Linked List with many nodes (start of the Node)
-// if linked list doesnt exist and we want to add the ndoe at start then we have to use the if-else statement
+// if linked list doesnt exist and we want to add the node at start then we have to use the if-else statement
 // #include<iostream>
 // using namespace std;
 
