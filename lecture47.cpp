@@ -31,3 +31,5 @@
 // to map key order pair pe kaam karta hai
 // array ke sare element ko koi naam de sakte hai with the help of map
 // syntax:- unordered_map<key, value>map_name;
+
+// Solved many problem on leetcode
