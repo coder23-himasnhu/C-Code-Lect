@@ -1,16 +1,29 @@
 #include<iostream>
 using namespace std;
 
-class Node
+int count = 0;
+class num
 {
    public:
-   int value;
-   Node *next;
+   num()
+   {
+      count++;
+      cout<<"this is the time where constructor is called for object number "<<count<<endl;
+   }
+   ~num()
+   {
+      cout<<"this is the time when destructor is called for object number "<<count<<endl;
+      count--;
+   }
 };
 
 int main()
 {
-   Node A;
-   A.value = 5;
-   A.value = 0:
+   cout<<"we are inside our main function"<<endl;
+   cout<<"Creating first object n1"<<endl;
+   num n1;
+   {
+
+   }
+   return 0;
 }
