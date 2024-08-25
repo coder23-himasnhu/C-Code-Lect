@@ -201,22 +201,22 @@
 
 
 // Stack using STL(Standard Template Library)
-#include<iostream>
-#include<vector>
-#include<stack>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// #include<stack>
+// using namespace std;
 
-int main()
-{
-    stack<int>S;
-    S.push(6);
-    S.push(16);
-    S.push(62);
-    S.push(64);
-    cout<<S.size()<<endl;
-    cout<<S.top()<<endl;
-    cout<<S.empty()<<endl;
-}
+// int main()
+// {
+//     stack<int>S;
+//     S.push(6);
+//     S.push(16);
+//     S.push(62);
+//     S.push(64);
+//     cout<<S.size()<<endl;
+//     cout<<S.top()<<endl;
+//     cout<<S.empty()<<endl;
+// }
 
 // the actual implementation of stack is under deque
 // deque is a topic which i doesnt study till now
@@ -225,3 +225,41 @@ int main()
 // ans:- if vector is full and we want to store one more data in it, then vector create a new vector with double size than previous one
 // so this is disadvantage of vector, whereas in stack it wont happens.
 // vector also take space in heap, so the data in not continous, thatswhy vector always create new vector of double size.
+
+
+// valid parantheses:-
+#include<iostream>
+#include<stack>
+#include<vector>
+using namespace std;
+
+bool check(string str)
+{
+    stack<char>s;
+    for(int i=0; i<str.size(); i++)
+    {
+        // opening
+        if(str[i]=='(')
+        {
+            s.push(str[i]);
+        }
+        // closing
+        else{
+            if(s.empty())
+            {
+                return 0;
+            }
+            else{
+                s.pop();
+            }
+        }
+    }
+    return s.empty();
+};
+
+int main()
+{
+    string str = "(((()))";
+    cout<<check(str)<<endl;
+    return 0;
+}
