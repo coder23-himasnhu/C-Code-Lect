@@ -194,3 +194,10 @@
 // }
 
 // by using -> symbol we can dynamically allocate the memory (it is just a way)
+
+// class ki size exist nhi karti q ki wo real world entity nhi hai
+// agar hum us class ka object banate hai wo wo space leta hai becuase wo real me exist karta hai(object main function me likha jata hai)
+
+// yaha hum memory ko compromise kar rahe hai q ki hume answer jaldi se jaldi chahiye
+
+// alag alag system me alag alag answer aa sakte hai size ke related agar datatype same ho phir bhi

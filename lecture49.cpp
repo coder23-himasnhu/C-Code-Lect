@@ -259,7 +259,7 @@ bool check(string str)
 
 int main()
 {
-    string str = "(((()))";
+    string str = "(((())";
     cout<<check(str)<<endl;
     return 0;
 }
