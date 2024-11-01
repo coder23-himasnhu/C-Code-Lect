@@ -112,7 +112,6 @@
 
 //     // s.push_back('p');
 //     // cout<<s;
-
 //     // s.pop_back();
 //     cout<<s;
 // }
@@ -136,3 +135,5 @@ int main()
     string s="\\0";
     cout<<s;
 }
+// In C++, the backslash (\) is an escape character. To represent a single backslash in a string, you need to escape it with another
+//  backslash. Thus, \\ becomes a single \ in the string. Therefore, \\0 represents the string \0, which consists of two characters: a backslash and the character 0.

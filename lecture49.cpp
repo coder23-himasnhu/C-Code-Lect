@@ -44,37 +44,37 @@
 //         else{
 //             top++;
 //             arr[top] = value;
-//             cout<<"Pushed value in the Stack\n";
-//             flag = 0;
-//         }
-//     }
-//     // pop
-//     void pop()
-//     {
-//         if(top==-1)
-//         {
-//             cout<<"Stack Underflow\n";
-//         }
-//         else{
-//             cout<<"popped "<<arr[top]<<" from the stack\n";
-//             top--;
-//             if(top == -1)
-//             {
-//                 flag = 1;
-//             }
-//         }
-//     }
-//     // peek value of stack
-//     int peek()
-//     {
-//         if(top==-1)
-//         {
-//             cout<<"Stack is empty\n";
-//             return -1;
-//         }
-//         else{
-//             return arr[top];
-//         }
+    //         cout<<"Pushed value in the Stack\n";
+    //         flag = 0;
+    //     }
+    // }
+    // // pop
+    // void pop()
+    // {
+    //     if(top==-1)
+    //     {
+    //         cout<<"Stack Underflow\n";
+    //     }
+    //     else{
+    //         cout<<"popped "<<arr[top]<<" from the stack\n";
+    //         top--;
+    //         if(top == -1)
+    //         {
+    //             flag = 1;
+    //         }
+    //     }
+    // }
+    // // peek value of stack
+    // int peek()
+    // {
+    //     if(top==-1)
+    //     {
+    //         cout<<"Stack is empty\n";
+    //         return -1;
+    //     }
+    //     else{
+    //         return arr[top];
+    //     }
 //     }
 //     // empty
 //     bool empty()
