@@ -1,26 +1,18 @@
-// print all the element of the queue
-#include <iostream>
-#include <queue>
+#include<iostream>
 using namespace std;
+
+class Student
+{
+    public:
+    string name;
+    int roll;
+    Student()
+    {
+        cout<<"default constructor";
+    }
+};
 
 int main()
 {
-    queue<int>q;
-    q.push(20);
-    q.push(22);
-    q.push(12);
-    //print the value with popping the first element
-    // while(!q.empty())
-    // {
-    //     cout<<q.front()<<" ";
-    //     q.pop();
-    // }
-
-    int n = q.size();
-    while(n--)
-    {
-        cout<<q.front()<<" ";
-        q.push(q.front());
-        q.pop();
-    }
+    Student s;
 }

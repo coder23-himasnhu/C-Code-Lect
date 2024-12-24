@@ -1,29 +1,16 @@
-#include<iostream>
-using namespace std;
+#include <iostream>
+#include <vector>
 
-int count = 0;
-class num
-{
-   public:
-   num()
-   {
-      count++;
-      cout<<"this is the time where constructor is called for object number "<<count<<endl;
-   }
-   ~num()
-   {
-      cout<<"this is the time when destructor is called for object number "<<count<<endl;
-      count--;
-   }
-};
+using namespace std;
 
 int main()
 {
-   cout<<"we are inside our main function"<<endl;
-   cout<<"Creating first object n1"<<endl;
-   num n1;
+   vector<int>v;
+   v.push_back(12);
+   v.push_back(13);
+   v.push_back(15);
+   for(int i=0; i<=v.size(); i++)
    {
-
+      cout<<i<<" ";
    }
-   return 0;
 }

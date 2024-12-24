@@ -24,7 +24,7 @@
 //     cin>>name1>>age1>>roll_num1>>grade1;
     
 // }
-// so for many students it is difficult to manage so the concept introduce called class 
+// so for many students it is difficult to manage so the concept introduce called class.
 // there are three access modifier in the class called private, public, protected;
 // in default if we does not specified access modiefier than by default it is Private
 
@@ -201,3 +201,5 @@
 // yaha hum memory ko compromise kar rahe hai q ki hume answer jaldi se jaldi chahiye
 
 // alag alag system me alag alag answer aa sakte hai size ke related agar datatype same ho phir bhi
+
+// class name == user name data type(class name ko hi user define datatype bolte hai)
