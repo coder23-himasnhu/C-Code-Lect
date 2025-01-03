@@ -1,16 +1,26 @@
-#include <iostream>
-#include <vector>
-
+#include<iostream>
 using namespace std;
+
+class student
+{
+   private:
+   string name;
+   int num;
+
+   public:
+   student(string name, int num)
+   {
+      this->name = name;
+      this->num = num;
+   }
+   void display()
+   {
+      cout<<name<<" "<<num;
+   }
+};
 
 int main()
 {
-   vector<int>v;
-   v.push_back(12);
-   v.push_back(13);
-   v.push_back(15);
-   for(int i=0; i<=v.size(); i++)
-   {
-      cout<<i<<" ";
-   }
+   student s();
+   s.display();
 }

@@ -1,30 +1,22 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 
-//no argument no return
-void news1()
+class structure
 {
-    printf("OUTPUt\n");
-}
-//no argument with return
-float news2()
-{
-    return 5+1;
-}
-//argument with no return
-void news3(int a, int b)
-{
-    printf("%d\n", a+b);
-}
-//argument with return
-int news4(int a, int b)
-{
-    return a*b;
-}
+    public:
+    int circle(int r)
+    {
+        cout<<2*3.14*r<<endl;
+    }
+    int square(int l, int b)
+    {
+        cout<<l*b;
+    }
+};
 
 int main()
 {
-    news1();
-    printf("%f\n",news2());
-    news3(2,4);
-    printf("%d\n",news4(2,3));
+    structure a;
+    a.circle(4);
+    a.square(4,5);
 }

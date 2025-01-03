@@ -12,7 +12,7 @@
 // cin>>x;(if input of x is 0)
 // cout<<i/x;
 
-// new keyword run time me memory allocate karke dega heap me
+// "new" keyword run time me memory allocate karke dega heap me
 
 // Eg:- of Function Overloading:- both the function has same name, par hamara compiler compile time pe bata diya ki konsa function lena konse parameter pe
 
