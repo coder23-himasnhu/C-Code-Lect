@@ -26,5 +26,6 @@ int main()
 }
 
 
-Implementation of Queue Using Stack
-implement stack using Queue.
+// Implementation of Queue Using Stack
+// implement stack using Queue.
+// Solved in Leetcode
