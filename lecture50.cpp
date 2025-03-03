@@ -1,6 +1,7 @@
 // Queue:-
 // Queues are a type of container adaptors that operate in a first in first out (FIFO) type of arrangement.
 // Elements are inserted at the back (end) and are deleted from the front.
+// we can implement queue using array or linked list
 
 // it has some basic kind of operation:- 
 // push, pop, isempty, front, isfull
