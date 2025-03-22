@@ -168,7 +168,7 @@ int main()
     deque<int>q;
     q.push_back(5);
     q.push_back(10);
-    q.pop_front();
+    // q.pop_front();
     cout<<q.front()<<endl;
 }
 
