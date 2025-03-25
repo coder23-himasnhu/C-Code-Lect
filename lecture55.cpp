@@ -97,3 +97,8 @@ int main()
     root = BinaryTree();
 
 }
+
+// There are three types of Binary tree traversal
+1) Pre-order Traversal:- NLR(first visit Node then, left, then right)
+2) In-Order Traversal:- LNR
+3) Post-order Traversal:- LRN  
