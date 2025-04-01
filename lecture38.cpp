@@ -1,4 +1,5 @@
 // Static Data Member:-
+// Static means the Property belongs to the class not to the object.
 // They are attribute of classes or class member.(ye ek hi baaar create hoga)
 // It is declared using static keyword
 // Only one copy of that member is created for the entire class and is shared by all the object

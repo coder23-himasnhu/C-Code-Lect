@@ -240,3 +240,8 @@
 // {
 //     Coustomer A1;
 // }
+
+
+//Overloading of a constructor:- If a class has two or more constructor, this concept is known as overloading of constructor.
+//All the constructor must have same name(as the name of the class).
+//And all the constructor must have different number of arguments

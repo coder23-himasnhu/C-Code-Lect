@@ -90,6 +90,7 @@
 
 
 // Virtual Function: Why virtual function is called run time polymorsim?
+//Virtual function are those which are present in the base class and ovveridden in the derived class.
 
 // p=new Dog():- dog ka ek object create karo aur uska address p me store kara do
 //  animal *p:- p type ka ek pointer hai, jo pointer kar raha hai animal ko
@@ -127,5 +128,14 @@ int main()
 }
 
 // pure virtual function:- Jis function me kuch bhi assign na ho, 0 assign ho usse pure virtual function bolte hai
+// A virtual function that has no bosy in the base class, is known as pure virtual function.
+// This virtual function is defined inside ites derived classes.
 // Eg:- virtual void speak()=0;
 // condition:- jis class me pure virtual function hai, uska hum direct object create nhi kar sakte
+
+// Abstract class:- A class that contains alteast one pure virtual function, is known as abstract class.
+// Any class which any pure virtual function are called the Abstract class.(Abstract class ka object nhi bana sakte bcz. abstract means incomplete).
+// Since abstract class contain one or more pure virtual function(ie functions without body), so object of an abstract classes can not created
+// If any other class inherit the property of abstract class, then the same class also become the abstract class, but it also has a second option
+// to complete(incomplete) the abstract class
+//Why need Abstract class:- whenever we need to make our child class as a complete class, we need to create it as abstract class
