@@ -327,3 +327,5 @@ int main()
 // virtual lagane se hamare compiler ko ye pata chal gaya ki dono name ek hi hai
 
 // multipath se bhi hum hybrid inheritance bana sakte hai
+
+// Virtual Function:- A virtual function is a member function that is declared within a base class and is re-defined by a derived class. Virtual functions cannot be static.

@@ -1,6 +1,18 @@
 // Polymorphism:- means many Form
 // eg:- there is man: the same man can be a father, husband, son, brother or any
 
+// Polymorphism:- 
+// 1. Compile-Time Polymorphism:- in compile-time polymorphism, the compiler determines how the function or operator will work depending on the context.
+//  This type of polymorphism is achieved by function overloading or operator overloading.
+// A. Function Overloading:- It is a feature of object-oriented programming where two or more functions can have the same name but behave differently for different parameters. Such functions are said to be overloaded
+// Functions can be overloaded either by changing the number of arguments or changing the type of arguments.
+// B. Operator Overloading:- C++ has the ability to provide the operators with a special meaning for particular data type, this ability is known as operator overloading
+// 2. Runtime Polymorphism:- Runtime polymorphism is implemented using function overriding with virtual functions.
+// Function Overriding:- It occurs when a derived class defines one or more member functions of the base class. That base function is said to be overridden. The base class function must be declared as virtual function for runtime polymorphism to happen.
+// -Compile-Time Polymorphism: Function call is bound to its definition during compilation.
+// -Runtime Polymorphism: Function call is bound to its definition during runtime.
+
+
 // polymorphism can be divided in two types:- 1) Compile Time 2)Run Time
 //  compile Time divided in two types:- 1) Function Overloading 2) Operator Overloading
 // Run Time has only one type:- 1) Virtual Function
@@ -12,7 +24,10 @@
 // cin>>x;(if input of x is 0)
 // cout<<i/x;
 
-// "new" keyword run time me memory allocate karke dega heap me
+// New:- The new operator requests for the allocation of the block of memory of the given size of type on the Free Store.
+// delete:- delete operator is used to release dynamically allocated memory. It deallocates memory that was previously allocated with new.
+// “new” does call the constructor of a class whereas “malloc()” does not.
+// same as new keyword, delete calls the destructor fo the class.
 
 // Eg:- of Function Overloading:- both the function has same name, par hamara compiler compile time pe bata diya ki konsa function lena konse parameter pe
 
