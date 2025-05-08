@@ -46,41 +46,41 @@ int binarysearch(int arr[], int n, int target)
             {
                 start=mid+1;
             }
-//             else{
-//                 end=mid-1;
-//             }
-//         }
-//         // return -1;
-//     }
+            else{
+                end=mid-1;
+            }
+        }
+        // return -1;
+    }
 
-//     vector<int>a(2);
-//     a[0]=start;
-//     a[1]=end;
+    vector<int>a(2);
+    a[0]=start;
+    a[1]=end;
 
-//     return (first, last);
-// }
+    return (first, last);
+}
 
-// int main()
-// {
-//     int n;
-//     cout<<"enter the size of the array";
-//     cin>>n;
-//     int arr[1000];
-//     cout<<"enter the array";
-//     for(int i=0; i<n; i++)
-//     {
-//         cin>>arr[i];
-//     }
-//     int target;
-//     cout<<"enter the number you want to find";
-//     cin>>target;
+int main()
+{
+    int n;
+    cout<<"enter the size of the array";
+    cin>>n;
+    int arr[1000];
+    cout<<"enter the array";
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    int target;
+    cout<<"enter the number you want to find";
+    cin>>target;
 
-//     cout<<binarysearch(arr,n,target);
-//     {
-//         return 0;
-//     }
+    cout<<binarysearch(arr,n,target);
+    {
+        return 0;
+    }
 
-// }
+}
 
 
 // question on search insert postion:- leetcode

@@ -105,46 +105,46 @@
 
 
 // Virtual Function: Why virtual function is called run time polymorsim?
-//Virtual function are those which are present in the base class and ovveridden in the derived class.
+//A virtual function is a member function in the base class that is declared using the keyword virtual and is overridden in the derived class. 
 
 // p=new Dog():- dog ka ek object create karo aur uska address p me store kara do
 //  animal *p:- p type ka ek pointer hai, jo pointer kar raha hai animal ko
 // virtual keyword jaha bhi dikhe to wo ye batayega ki usko run time me decide karna compile time pe nhi.
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Animal
-{
-    public:
-    virtual void speak()  //agar hum yaha virtual nhi lagate hai to huhu print hoga
-    {
-        cout<<"HuHu\n";
-    }
-};
-class Dog: public Animal
-{
-    public:
-    void speak()
-    {
-        cout<<"Bark\n";
-    }
-};
+// class Animal
+// {
+//     public:
+//     virtual void speak()  //agar hum yaha virtual nhi lagate hai to huhu print hoga
+//     {
+//         cout<<"HuHu\n";
+//     }
+// };
+// class Dog: public Animal
+// {
+//     public:
+//     virtual void speak()
+//     {
+//         cout<<"Bark\n";
+//     }
+// };
 
-int main()
-{
-    Animal *p;
-    p = new Dog();
-    p->speak();
-    //upar ke teen line aise bhi likh sakte the:-
-    // Dog d1;
-    // d1.speak();
-}
+// int main()
+// {
+//     // Animal *p;
+//     // p = new Dog();
+//     // p->speak();
+//     //upar ke teen line aise bhi likh sakte the:-
+//     Dog d;
+//     d.speak();
+// }
 
 // pure virtual function:- Jis function me kuch bhi assign na ho, 0 assign ho usse pure virtual function bolte hai
-// A virtual function that has no bosy in the base class, is known as pure virtual function.
-// This virtual function is defined inside ites derived classes.
+// A pure virtual function is a virtual function that doesn’t have a definition in the base class. It is declared by assigning = 0 in its declaration.
+// This virtual function is defined inside its derived classes.
 // Eg:- virtual void speak()=0;
 // condition:- jis class me pure virtual function hai, uska hum direct object create nhi kar sakte
 
@@ -154,3 +154,63 @@ int main()
 // If any other class inherit the property of abstract class, then the same class also become the abstract class, but it also has a second option
 // to complete(incomplete) the abstract class
 //Why need Abstract class:- whenever we need to make our child class as a complete class, we need to create it as abstract class
+
+// code of pure virtual function and abstract class by "chai and code"
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class tea //Abstract class
+{
+public:
+    virtual void prepareIndgridient() = 0; //pure virtual function (virtual function is redefined in the derived class)
+    virtual void brew() = 0;
+    virtual void serve() = 0;
+
+    void makeTea()
+    {
+        prepareIndgridient();
+        brew();
+        serve();
+    }
+};
+
+class GreenTea : public tea
+{
+    public:
+    void prepareIndgridient() override{  //jab bhi pure virtual function ko reuse karte hai derived class me to override lagana hai
+        cout<<"Green leaves and water is ready"<<endl;
+    }
+    void brew() override{
+        cout<<"brew is ready"<<endl;
+    }
+    void serve() override{
+        cout<<"serve is ready"<<endl;
+    }
+};
+
+class MasalaTea : public tea
+{
+    public:
+    void prepareIndgridient() override{
+        cout<<"Green leaves and water is ready"<<endl;
+    }
+    void brew() override{
+        cout<<"brew is ready"<<endl;
+    }
+    void serve() override{
+        cout<<"serve is ready"<<endl;
+    }
+};
+// Abstract class ke objects nhi bante hai
+int main()
+{
+    GreenTea greentea;
+    MasalaTea masalatea;
+
+    greentea.makeTea();
+    masalatea.makeTea();
+    return 0;
+}

@@ -129,58 +129,58 @@
 
 
 //prime number:- eg:- agar n=10 hai, to 2 se lekar 9 tak loi bhi number divide nhi hone chahiye isliye loop lagaya hai
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    int n;
-    cout << "enter the number:";
-    cin >> n;
-    if (n < 2)
-    {
-        cout << "then the number is not a prime number";
-        return 0;
-    }
-    else
-    {
-        for (int i = 2; i <= n; i++)
-        {
-            if (n % i == 0)
-            {
-                cout << "it is not a prime";
-                return 0;
-            }
-            else
-            {
-                cout << "it is prime";
-                return 0;
-            }
-        }
-    }
-}
-
-
-
-
-//fibonacci series in cpp.
 // #include <iostream>
 // using namespace std;
 
 // int main()
 // {
-//     int u;
-//     cin >> u;
-//     int a = 0;
-//     int b = 1;
-//     int c = 1;
-//     cout<<a<<" "<<b<<" "<<c<<" ";
-//     for (int i = 1; i <= u-3; i++)
+//     int n;
+//     cout << "enter the number:";
+//     cin >> n;
+//     if (n < 2)
 //     {
-//         a = b;
-//         b = c;
-//         c = a + b;
-//         cout << c<<" ";
+//         cout << "then the number is not a prime number";
+//         return 0;
 //     }
-//     cout<<endl;
+//     else
+//     {
+//         for (int i = 2; i <= n; i++)
+//         {
+//             if (n % i == 0)
+//             {
+//                 cout << "it is not a prime";
+//                 return 0;
+//             }
+//             else
+//             {
+//                 cout << "it is prime";
+//                 return 0;
+//             }
+//         }
+//     }
 // }
+
+
+
+
+//fibonacci series in cpp.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int u;
+    cin >> u;
+    int a = 0;
+    int b = 1;
+    int c = 1;
+    cout<<a<<" "<<b<<" "<<c<<" ";
+    for (int i = 1; i <= u-3; i++)
+    {
+        a = b;
+        b = c;
+        c = a + b;
+        cout << c<<" ";
+    }
+    cout<<endl;
+}

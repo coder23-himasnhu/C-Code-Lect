@@ -161,3 +161,87 @@
 // Abstraction:- Displaying only essential information and hiding the detail.
 
 //hamare sare code abstraction hi hai q ki wo hame kuch output deta hai, hame code se kuch matlab nhi hai.
+
+
+// Friend function and class by Code With Harry:-
+#include <iostream>
+using namespace std;
+
+class Complex;
+
+class calculator
+{
+public:
+    int add(int a, int b)
+    {
+        return (a + b);
+    }
+
+    int sumrealComplex(Complex, Complex);
+};
+
+class Complex
+{
+    int a, b;
+    //Individual declaring functions as friend
+    // friend int calculator ::sumrealComplex(Complex, Complex);
+
+    //Declaring the entire calculator class as friend
+    friend class calculator;
+public:
+    void setNumber(int n1, int n2)
+    {
+        a = n1;
+        b = n2;
+    }
+
+    void printNumber()
+    {
+        cout << "Your Number is:- " << a << " and " << b << endl;
+    }
+};
+
+int calculator ::sumrealComplex(Complex o1, Complex o2)
+{
+    return (o1.a + o2.a);
+}
+
+int main()
+{
+    Complex o1, o2;
+    o1.setNumber(1, 4);
+    o2.setNumber(5, 7);
+    calculator calc;
+    int res = calc.sumrealComplex(o1, o2);
+    cout << "The sum of real part of o1 and o2 is:- " << res << endl;
+    return 0;
+}
+
+
+// Easy example of friend class....:-
+#include <iostream>
+using namespace std;
+
+class A
+{
+   int x;
+   friend class B;
+};
+
+class B
+{
+   public:
+   void display(A t1)
+   {
+      t1.x = 20;
+      cout<<"Value of X is:- "<<t1.x;
+   }
+};
+
+int main()
+{
+   A obj1;
+   B obj2;
+
+   obj2.display(obj1);
+}

@@ -14,7 +14,7 @@
 //     {
 //         for(int i=0; i<row; i++)
 //         {
-//             cout<<arr[i][j]<<" ";
+//             cout<<arr[i][j]<<" "; //row and col is line pe depend karta hai, agar "i" pehle raha to horizontal and "j" pehle raha to vertical
 //         }
 //     }
 // }
