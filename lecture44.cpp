@@ -35,54 +35,54 @@
 
 // Create a New Linked List with many nodes (start of the Node)
 // if linked list doesnt exist and we want to add the node at start then we have to use the if-else statement
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// class Node
-// {
-//     public: 
-//     int data;
-//     Node *next;
+class Node
+{
+    public: 
+    int data;
+    Node *next;
 
-//     Node(int value)
-//     {
-//         data = value;
-//         next = NULL;
-//     }
-// };
+    Node(int value)
+    {
+        data = value;
+        next = NULL;
+    }
+};
 
-// int main()
-// {
-//     // Node A1(4);  //this is static way
-//     Node *Head;
-//     Head = NULL;
+int main()
+{
+    // Node A1(4);  //this is static way
+    Node *Head;
+    Head = NULL;
 
-//     int arr[] = {2,3,4,5,6};
-//     // Insert the node at beginning
-//     // Linked List does't exist
-//     for(int i=0; i<5; i++)
-//     {
-//     if(Head==NULL)
-//     {
-//         Head = new Node(arr[i]);
-//     }
-//     // Linked List exist karta hai
-//     else{
-//         Node *temp;
-//         temp = new Node(arr[i]);
-//         temp->next=Head;
-//         Head = temp;
-//     }
-//     }
+    int arr[] = {2,3,4,5,6};
+    // Insert the node at beginning
+    // Linked List does't exist
+    for(int i=0; i<5; i++)
+    {
+    if(Head==NULL)
+    {
+        Head = new Node(arr[i]);
+    }
+    // Linked List exist karta hai
+    else{
+        Node *temp;
+        temp = new Node(arr[i]);
+        temp->next=Head;
+        Head = temp;
+    }
+    }
 
-//     // print the value
-//     Node *temp = Head;
-//     while(temp!=NULL)
-//     {
-//         cout<<temp->data<<" ";
-//         temp=temp->next;
-//     };
-// }
+    // print the value
+    Node *temp = Head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    };
+}
 
 
 // insert node at last of linked list
